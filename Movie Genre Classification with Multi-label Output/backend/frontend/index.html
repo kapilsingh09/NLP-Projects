@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover movie genres from a plot summary with the Movie Genre Classifier."
+    />
+    <title>Frame — Movie Genre Classifier</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Frame home">
+          <span class="brand-mark" aria-hidden="true"><span></span></span>
+          <span>FRAME<span class="brand-period">.</span></span>
+        </a>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to light mode"
+          title="Switch color theme"
+        >
+          <span class="theme-icon" aria-hidden="true">◐</span>
+          <span id="theme-label">Light mode</span>
+        </button>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span class="status-dot"></span> MULTI-LABEL MOVIE AI</p>
+          <h1 id="page-title">Every story has<br />a <span>genre.</span></h1>
+          <p class="intro-copy">
+            Share a movie plot. The classifier will find the genres that fit its story.
+          </p>
+        </section>
+
+        <section class="workspace" aria-label="Movie genre prediction">
+          <form class="prediction-card" id="prediction-form">
+            <div class="card-heading">
+              <div>
+                <p class="step-label">YOUR STORY</p>
+                <h2>Start with a plot</h2>
+              </div>
+              <span class="card-index" aria-hidden="true">01</span>
+            </div>
+
+            <label for="movie-title">Movie title</label>
+            <input
+              id="movie-title"
+              name="title"
+              type="text"
+              placeholder="e.g. The Midnight Voyage"
+              autocomplete="off"
+              required
+            />
+
+            <label for="movie-plot">Plot summary</label>
+            <textarea
+              id="movie-plot"
+              name="plot"
+              rows="7"
+              placeholder="A few sentences are enough. What happens in your movie?"
+              required
+            ></textarea>
+            <div class="input-foot">
+              <span>More detail can help the model find a stronger match.</span>
+              <span id="character-count">0 characters</span>
+            </div>
+
+            <p class="form-message" id="form-message" role="alert" hidden></p>
+            <button class="submit-button" id="submit-button" type="submit">
+              <span id="submit-label">Discover genres</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </button>
+            <p class="privacy-note">Your prediction is saved to the project history.</p>
+          </form>
+
+          <aside class="side-panel">
+            <section class="result-card" id="result-card" aria-live="polite" hidden>
+              <div class="side-heading">
+                <span class="side-icon result-icon" aria-hidden="true">✳</span>
+                <div>
+                  <p class="step-label">CLASSIFIER OUTPUT</p>
+                  <h2>Your genres</h2>
+                </div>
+              </div>
+              <p class="result-title" id="result-title"></p>
+              <div class="genre-list" id="genre-list"></div>
+              <p class="result-empty" id="result-empty" hidden>
+                No genres were returned for this plot.
+              </p>
+            </section>
+
+            <section class="history-card" aria-labelledby="history-title">
+              <div class="side-heading">
+                <span class="side-icon history-icon" aria-hidden="true">↻</span>
+                <div>
+                  <p class="step-label">RECENT PREDICTIONS</p>
+                  <h2 id="history-title">History</h2>
+                </div>
+                <button class="refresh-button" id="refresh-history" type="button">
+                  Refresh
+                </button>
+              </div>
+              <p class="history-message" id="history-message" aria-live="polite">
+                Loading saved predictions…
+              </p>
+              <ul class="history-list" id="history-list"></ul>
+            </section>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>BUILT FOR STORIES</span>
+        <span>Powered by the Movie Genre Classifier API</span>
+      </footer>
+    </div>
+  </body>
+</html>

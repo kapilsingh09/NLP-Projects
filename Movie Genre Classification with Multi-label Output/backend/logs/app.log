@@ -1,0 +1,24 @@
+2026-10-30 23:03:00,474 | INFO | backend.main | Prediction requested by 127.0.0.1 for title='The Dark Knight'
+2026-10-30 23:03:00,541 | INFO | backend.main | Predicted genres for 'The Dark Knight': ['Action', 'Action/Adventure', 'Drama', 'Thriller']
+2026-10-30 23:03:00,542 | INFO | backend.database.db_funs | Inserted movie with ID: 6ae4d4cc2f1cf4f14e5cc0ea
+2026-10-30 23:03:00,542 | INFO | backend.database.db_funs | Stored successfully!
+2026-10-30 23:03:00,542 | INFO | backend.main | Saved prediction with id=6ae4d4cc2f1cf4f14e5cc0ea
+2026-10-30 23:03:00,542 | INFO | backend.database.db_funs | Movies retrieved successfully!
+2026-10-30 23:03:00,542 | INFO | backend.main | Retrieved 1 prediction records
+
+2026-10-30 23:05:31,466 | WARNING | backend.main | Request validation failed for POST /predict: [{'type': 'missing', 'loc': ('plot',), 'msg': 'Field required', 'input': {'title': 'The Dark Knight'}, 'url': 'https://errors.pydantic.dev/2.14/v/missing'}]
+2026-10-30 23:05:48,922 | WARNING | backend.main | Request validation failed for POST /predict: [{'type': 'missing', 'loc': ('plot',), 'msg': 'Field required', 'url': 'https://errors.pydantic.dev/2.14/v/missing'}]
+2026-10-30 23:07:16,494 | WARNING | backend.main | Request validation failed for POST /predict: [{'type': 'json_invalid', 'loc': ('body', 177), 'msg': 'JSON decode error', 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+2026-10-30 23:07:47,791 | WARNING | main | Request validation failed for POST /predict: [{'type': 'json_invalid', 'loc': ('body', 177), 'msg': 'JSON decode error', 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+2026-10-30 23:08:45,996 | WARNING | backend.main | Request validation failed for POST /predict: [{'type': 'json_invalid', 'loc': ('body', 177), 'msg': 'JSON decode error', 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+2026-10-30 23:09:35,215 | INFO | main | Prediction requested by 127.0.0.1 for title='Finding Nemo'
+2026-10-30 23:09:35,359 | INFO | main | Predicted genres for 'Finding Nemo': ['Adventure', 'Comedy', 'Drama']
+2026-10-30 23:09:35,362 | INFO | database.db_funs | Inserted movie with ID: 6ae4d65771e20c2c2e5737e5
+2026-10-30 23:09:35,363 | INFO | database.db_funs | Stored successfully!
+2026-10-30 23:09:35,364 | INFO | main | Saved prediction with id=6ae4d65771e20c2c2e5737e5
+2026-10-30 23:09:58,345 | WARNING | main | Request validation failed for POST /predict: [{'type': 'json_invalid', 'loc': ('body', 188), 'msg': 'JSON decode error', 'ctx': {'error': 'Expecting property name enclosed in double quotes'}}]
+2026-10-30 23:10:10,710 | INFO | main | Prediction requested by 127.0.0.1 for title='The Notebook'
+2026-10-30 23:10:10,834 | INFO | main | Predicted genres for 'The Notebook': ['Black-and-white', 'Drama', 'Romance Film', 'Romantic drama']
+2026-10-30 23:10:10,837 | INFO | database.db_funs | Inserted movie with ID: 6ae4d67a71e20c2c2e5737e6
+2026-10-30 23:10:10,837 | INFO | database.db_funs | Stored successfully!
+2026-10-30 23:10:10,837 | INFO | main | Saved prediction with id=6ae4d67a71e20c2c2e5737e6
